@@ -1,9 +1,8 @@
-package com.example.projectfinal.country;
+package com.example.projectfinal.airport;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CountryRepository extends JpaRepository<Country, Long> {
-
+public interface AirportRepository extends JpaRepository<Airport, Long> {
 }
