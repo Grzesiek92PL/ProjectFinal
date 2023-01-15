@@ -1,9 +1,9 @@
 package com.example.projectfinal.continent;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 
-@Controller
+@Repository
 public interface ContinentRepository extends JpaRepository<Continent, Long> {
 
 }

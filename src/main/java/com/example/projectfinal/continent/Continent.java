@@ -1,16 +1,26 @@
 package com.example.projectfinal.continent;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.example.projectfinal.country.Country;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+import java.util.Set;
 
 @Entity
+@Getter
+@Setter
+@NoArgsConstructor
 public class Continent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nameContinent;
+
+    @OneToMany(mappedBy = "continent") // Nazwa zmiennej po drugiej stronie relacji
+    private Set<Country> countries;
+
 
 
 

@@ -11,8 +11,5 @@ public class ContinentController {
         this.continentServices = continentServices;
     }
 
-    public String continents(Model model) {
 
-
-    }
 }
