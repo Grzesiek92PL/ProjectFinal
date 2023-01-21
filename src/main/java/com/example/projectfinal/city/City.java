@@ -1,6 +1,7 @@
 package com.example.projectfinal.city;
 
 import com.example.projectfinal.Hotel.Hotel;
+import com.example.projectfinal.airport.Airport;
 import com.example.projectfinal.country.Country;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -26,6 +27,9 @@ public class City {
 
     @OneToMany(mappedBy = "city")
     private Set<Hotel> hotels;
+
+    @OneToMany(mappedBy = "city")
+    private Set<Airport> airports;
 }
 
 
