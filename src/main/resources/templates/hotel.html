@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+<body>
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>rating</th>
+        <th>description</th>
+    </tr>
+    <th:block th:each="hotel:${hotels}">
+        <tr>
+            <td>
+                <span th:text="${hotel.id}"></span>
+            </td>
+            <td>
+                <span th:text="${hotel.name}"></span>
+            </td>
+            <td>
+                <span th:text="${hotel.rating}"></span>
+            </td>
+            <td>
+                <span th:text="${hotel.description}"></span>
+            </td>
+        </tr>
+
+
+
+    </th:block>
+</table>
+
+</body>
+</html>

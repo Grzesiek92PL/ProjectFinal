@@ -16,7 +16,7 @@ public class Continent {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nameContinent;
+    private String name;
 
     @OneToMany(mappedBy = "continent") // Nazwa zmiennej po drugiej stronie relacji
     private Set<Country> countries;

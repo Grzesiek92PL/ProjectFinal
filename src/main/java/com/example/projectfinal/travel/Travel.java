@@ -3,6 +3,7 @@ package com.example.projectfinal.travel;
 import com.example.projectfinal.Hotel.Hotel;
 import com.example.projectfinal.airport.Airport;
 import com.example.projectfinal.city.City;
+import com.example.projectfinal.country.Country;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,6 +40,10 @@ public class Travel {
     @ManyToOne
     @JoinColumn(name = "to_hotel_id")
     private Hotel toHotel;
+
+    @ManyToOne
+    @JoinColumn(name = "country_id")
+    private Country toCountry;
 
     @Column(name = "travel_date_from")
     private LocalDate dateFrom;
