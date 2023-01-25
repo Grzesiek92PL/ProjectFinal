@@ -18,6 +18,7 @@ public class HotelController {
     public String getHotelList(Model model) {
         List<HotelDto> hotelList = hotelServices.getHotels();
         model.addAttribute("hotels", hotelList);
-        return "hotel";
+        return "views/hotel";
     }
+
 }

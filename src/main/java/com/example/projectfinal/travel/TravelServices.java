@@ -50,9 +50,9 @@ public class TravelServices {
         }).toList();
     }
 
-    public void addTravel(Travel travel) {
-        travelRepository.save(travel);
+    public Travel findTravelById(Long id) {
+        return travelRepository.findById(id).orElse(null);
     }
-
-
 }
+
+

@@ -1,10 +1,11 @@
 package com.example.projectfinal.travel;
 
+import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.servlet.view.RedirectView;
 
 import java.util.List;
 
@@ -18,20 +19,25 @@ public class TravelController {
         this.travelServices = travelServices;
     }
 
+
     @GetMapping("/travel")
     public String getTravelList(Model model) {
         List<TravelDto> travelList = travelServices.getTravels();
         model.addAttribute("travels", travelList);
-        return "travel";
+        return "views/travel";
     }
 
-    @PostMapping("/addTravel")
-    public RedirectView postAddTravel(Travel travel){
-        travelServices.addTravel(travel);
-        return new RedirectView("/travels");
+    @GetMapping("/travel/{id}")
+    public String getTravelById(@PathVariable("id") Long id, Model model) {
+        Travel travel = travelServices.findTravelById(id);
+        model.addAttribute("travel", travel);
+        return "views/editTravel";
     }
 
-
-
-
+    @GetMapping("/addTravel")
+    public String getAddTravel() {
+        return "views/addNewTravel";
+    }
 }
+
+

@@ -54,10 +54,104 @@ public class Travel {
     @Column(name = "tour_price")
     private float tourPrice;
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public City getFromCity() {
+        return fromCity;
+    }
+
+    public void setFromCity(City fromCity) {
+        this.fromCity = fromCity;
+    }
+
+    public City getToCity() {
+        return toCity;
+    }
+
+    public void setToCity(City toCity) {
+        this.toCity = toCity;
+    }
+
+    public Airport getFromAirport() {
+        return fromAirport;
+    }
+
+    public void setFromAirport(Airport fromAirport) {
+        this.fromAirport = fromAirport;
+    }
+
+    public Airport getToAirport() {
+        return toAirport;
+    }
+
+    public void setToAirport(Airport toAirport) {
+        this.toAirport = toAirport;
+    }
+
+    public Hotel getToHotel() {
+        return toHotel;
+    }
+
+    public void setToHotel(Hotel toHotel) {
+        this.toHotel = toHotel;
+    }
+
+    public Country getToCountry() {
+        return toCountry;
+    }
+
+    public void setToCountry(Country toCountry) {
+        this.toCountry = toCountry;
+    }
+
+    public LocalDate getDateFrom() {
+        return dateFrom;
+    }
+
+    public void setDateFrom(LocalDate dateFrom) {
+        this.dateFrom = dateFrom;
+    }
+
+    public LocalDate getDateTo() {
+        return dateTo;
+    }
+
+    public void setDateTo(LocalDate dateTo) {
+        this.dateTo = dateTo;
+    }
+
+    public float getTourPrice() {
+        return tourPrice;
+    }
+
+    public void setTourPrice(float tourPrice) {
+        this.tourPrice = tourPrice;
+    }
 
 
-
-    /*
+/*
 1. Nazwa
 2. Opis
 3. Skąd
