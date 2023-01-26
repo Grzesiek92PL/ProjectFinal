@@ -12,5 +12,62 @@
 </head>
 <body>
 
+<table>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>description</th>
+        <th>fromCityName</th>
+        <th>toCity</th>
+        <th>fromAirport</th>
+        <th>toAirport</th>
+        <th>toHotel</th>
+        <th>country</th>
+        <th>tourPrice</th>
+        <th>travelDateFrom</th>
+        <th>travelDateTo</th>
+    </tr>
+    <th:block th:each="travel:${travels}">
+    <tr>
+        <td>
+            <span th:text="${travel.id}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.name}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.description}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.fromCityName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.toCityName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.fromAirportName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.toAirportName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.toHotelName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.countryName}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.tourPrice}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.travelDateFrom}"></span>
+        </td>
+        <td>
+            <span th:text="${travel.travelDateTo}"></span>
+        </td>
+    </tr>
+    </th:block>
+</table>
+
 </body>
 </html>

@@ -8,6 +8,7 @@ import com.example.projectfinal.country.CountryRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class TravelServices {
@@ -50,8 +51,8 @@ public class TravelServices {
         }).toList();
     }
 
-    public Travel findTravelById(Long id) {
-        return travelRepository.findById(id).orElse(null);
+    public Optional<Travel> findTravelById(Long id) {
+        return travelRepository.findById(id);
     }
 }
 

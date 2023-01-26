@@ -1,13 +1,12 @@
 package com.example.projectfinal.travel;
 
-import org.springframework.boot.Banner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 public class TravelController {
@@ -28,16 +27,19 @@ public class TravelController {
     }
 
     @GetMapping("/travel/{id}")
-    public String getTravelById(@PathVariable("id") Long id, Model model) {
-        Travel travel = travelServices.findTravelById(id);
-        model.addAttribute("travel", travel);
+    public String getTravelById(@PathVariable(value = "id") Long id, Model model) {
+        Optional<Travel> travel = travelServices.findTravelById(id);
+        model.addAttribute("travelById", travel);
         return "views/editTravel";
     }
+
+
 
     @GetMapping("/addTravel")
     public String getAddTravel() {
         return "views/addNewTravel";
     }
 }
+
 
 
