@@ -26,12 +26,6 @@ public class TravelController {
         return "views/travel";
     }
 
-    @GetMapping("/addTravel")
-    public String getAddTravel(){
-        return "views/addNewTravel";
-    }
-
-
 
 
     @GetMapping("/travel/{id}")
@@ -40,7 +34,6 @@ public class TravelController {
         model.addAttribute("travelById", travel);
         return "views/editTravel";
     }
-
 
 /*
     @GetMapping("/addTravel")
