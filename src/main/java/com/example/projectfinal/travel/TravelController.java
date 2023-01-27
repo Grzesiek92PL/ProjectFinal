@@ -26,6 +26,14 @@ public class TravelController {
         return "views/travel";
     }
 
+    @GetMapping("/addTravel")
+    public String getAddTravel(){
+        return "views/addNewTravel";
+    }
+
+
+
+
     @GetMapping("/travel/{id}")
     public String getTravelById(@PathVariable(value = "id") Long id, Model model) {
         Optional<Travel> travel = travelServices.findTravelById(id);
@@ -34,11 +42,17 @@ public class TravelController {
     }
 
 
-
+/*
     @GetMapping("/addTravel")
     public String getAddTravel() {
         return "views/addNewTravel";
     }
+
+    @GetMapping("/editTravel")
+    public String get(Model model) {
+        model.addAttribute("name", "Grzesiek");
+        return "views/editTravel";
+    }*/
 }
 
 
