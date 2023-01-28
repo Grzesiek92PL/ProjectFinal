@@ -1,0 +1,86 @@
+body {
+    background-image: url("../img/image.jpg");
+}
+
+
+#container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo {
+    width: 960px;
+    margin: 20px;
+    text-align: center;
+}
+
+.menu {
+    width: 100%;
+}
+
+.footer {
+    width: 960px;
+    margin: 20px;
+    text-align: center;
+}
+
+#logo {
+    float: left;
+    font-size: 70px;
+    width: 600px;
+    text-align: left;
+}
+
+#clock {
+    float: left;
+    font-size: 70px;
+    text-align: left;
+
+}
+
+.yt {
+    margin: 10px;
+    width: 240px;
+    height: 200px;
+    background-color: #d94348;
+    float: left;
+}
+
+.fb {
+    margin: 10px;
+    width: 240px;
+    height: 200px;
+    background-color: #4668b3;
+    float: left;
+
+}
+
+.tw {
+    margin: 10px;
+    width: 240px;
+    height: 200px;
+    background-color: #3095d3;
+    float: left;
+
+}
+
+.wh {
+    margin: 10px;
+    width: 240px;
+    height: 200px;
+    background-color: #128C7E;
+    float: left;
+
+}
+
+.option
+{
+    float: left;
+    min-width: 80px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    border-right: 2px solid #444444;
+    opacity: 0.8;
+}
