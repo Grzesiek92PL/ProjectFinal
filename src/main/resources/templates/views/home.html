@@ -19,7 +19,7 @@
 
     <div id="menu">
         <div class="option"><a href="/home">Home</a></div>
-        <div class="option">Travel</div>
+        <div class="option"><a href="/travel">Travel</a></div>
         <div class="option">Hotel</div>
         <div class="option">Country</div>
         <div class="option">Airport</div>
@@ -30,7 +30,7 @@
 
     <div id="topbar">
         <div id="topbarL">
-            <img src="sun&travel" />
+            <img id="img" th:src="@{/img/sun_travel.jpeg}"/>
         </div>
         <div id="topbarR">
             <span class="bigtitle">Kilka słów o nas</span>
@@ -44,7 +44,7 @@
 
     <div id="sidebar">
         <div class="optionL">Home</div>
-        <div class="optionL">Travel</div>
+        <div class="optionL"><a href="/travel" >Travel</a></div>
         <div class="optionL">Hotel</div>
         <div class="optionL">Country</div>
         <div class="optionL">Airport</div>
@@ -85,7 +85,7 @@
     </div>
 
     <div id="footer">
-        Biuro Podróży Sun&Travel - Twoje wymarzone wakacje
+        Biuro Podróży Sun&Travel - Twoje wymarzone wakacje &reg;
     </div>
 
 </div>
