@@ -2,23 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Travel</title>
+    <link href="../static/css/style1.css" th:href="@{/css/style1.css}" rel="stylesheet"/>
     <style>
         table, th, td {
             border: 1px solid black;
             border-collapse: collapse;
         }
+
         .btn {
             color: rgb(65, 252, 3);
-            background-color: black;
+            background-color: gray;
         }
+
         label {
-            color: blue;
+            color: black;
+            font-size: 20px;
+        }
+
+        #headline {
+            color: darkmagenta;
+            font-size: 60px;
+            < b > "WITAMY NA STRONIE SUN AND TRAVEL" < / b >;
+            text-align: center;
+            font-weight: 900;
+        }
+
+        #greetings {
+            color: purple;
             font-size: 40px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+<div id="container">
+    <div id="headline">WITAMY NA STRONIE SUN AND TRAVEL</div>
+    <div class="option">Country</div>
+    <div class="option">Calendar</div>
+    <div class="option">Search</div>
+    <div id="text">Turystyczny Fundusz Gwarancyjny jest wliczony w cenę</div>
+    <div class="option">Submit</div>
+    <div id="text">Dziękujemy, że wybrałeś nasze biuro podróży !!!</div>
+    <div id="text">Życzymy udanego wypoczynku !!!</div>
+    <adiv class="option"><a href="kliknij">Kliknij</a></div>
+<div id="headline">
+    WITAMY NA STRONIE SUN AND TRAVEL
+
+</div>
+
+<br/><br/>
+
 <form action="/action_page.php">
     <form action="/action_page.php">
         <label for="cities1">Choose departure:</label>
@@ -38,7 +72,7 @@
 
 <form action="/action_page.php">
     <form action="/action_page.php">
-        <label for="cities2" >Choose arrival:</label>
+        <label for="cities2">Choose arrival:</label>
         <select id="cities2" name="cities2">
             <option value="Madrid">Madrid</option>
             <option value="Warsaw">Warsaw</option>
@@ -50,14 +84,16 @@
             <label for="arrivals"></label>
             <input type="date" id="arrivals" name="arrivals">
         </form>
+        <br/><br/>
     </form>
 
-    <button type="submit" style="width: 100%" class="btn btn-success" value="Submit Button">Search</button>
-    <!--<div class="form-row " style="margin-top: 16px; margin-bottom: 16px">
+
+    <button type="search" class="btn btn-outline-primary" style="width: 20%;">Search</button>
+    <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
         <div class="col">
-            <button type="submit" class="btn btn-outline-primary" style="width: 100%;">Search</button>
+
         </div>
-    </div>-->
+    </div>
 </form>
 
 <table>
@@ -117,7 +153,30 @@
     </th:block>
 
 </table>
+<br/><br/>
+<form>
+    <label for="fname">Turystyczny Fundusz Gwarancyjny jest wliczony w cenę.</label><br>
 
+</form>
+
+<form>
+    <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
+        <div class="col">
+            <button type="submit" class="btn btn-outline-primary" style="width: 20%;">Submit</button>
+        </div>
+    </div>
+</form>
+
+<form>
+    <div id="greetings">
+        Dziękujemy, że wybrałeś nasze biuro podróży !!!
+        <br/> Życzymy udanego wypoczynku !!!
+        <br/>
+
+    </div>
+    <br/> Infolinia: 800 100 800
+    <input type="button" value="Kliknij">
+    <br/>
 </form>
 </body>
 </html>

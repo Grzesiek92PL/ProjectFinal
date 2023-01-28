@@ -2,13 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-  <style>
-    table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-    }
-  </style>
+    <title>Hotel</title>
+    <meta name="description" content="Nasze wspaniałe hotele">
+    <meta name="keywords"
+          content="Warsaw, Berlin, Madrid, Oslo, Rome, Marriott, Riu, Anker, H2, Cipriani, Hotel">
+    <meta http-equiv="X-Ua-Compatible" content="IE=edge,chrome=1">
+    <link href="../static/css/style3.css" th:href="@{/css/style3.css}" rel="stylesheet"/>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
 </head>
 <body>
 <table>
@@ -33,11 +38,9 @@
                 <span th:text="${hotel.description}"></span>
             </td>
         </tr>
-
-
-
     </th:block>
 </table>
+
 
 </body>
 </html>

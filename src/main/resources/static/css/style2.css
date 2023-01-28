@@ -46,10 +46,6 @@ body {
     background-color: #d94348;
     float: left;
 }
-.yt:hover
-{
-    background-color: #c83238;
-}
 
 .fb {
     margin: 10px;
@@ -59,10 +55,6 @@ body {
     float: left;
 }
 
-.fb:hover
-{
-   background-color: #2084c2;
-}
 
 .tw {
     margin: 10px;
@@ -96,4 +88,22 @@ body {
 #img2 {
     width: 240px;
     height: 200px;
+}
+#img3 {
+    width: 240px;
+    height: 200px;
+}
+#img4 {
+    width: 240px;
+    height: 200px;
+}
+#img5 {
+    width: 240px;
+    height: 200px;
+}
+.panel {
+    background-color: #128C7E;
+}
+a {
+    text-decoration: none;
 }

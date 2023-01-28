@@ -127,3 +127,7 @@ body {
     margin-bottom: 20px;
     border-bottom: 2px dotted #444444;
 }
+
+a {
+    text-decoration: none;
+}
