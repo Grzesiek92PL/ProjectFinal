@@ -11,6 +11,10 @@
     </style>
 </head>
 <body>
-<!--<p th:text="${name}"></p>-->
+<form method="post" th:object="${travelById}" th:action="@{/editTravel}">
+    <label for="name">Nazwa wycieczki</label>
+    <input type="text" id="name" th:value="${name}" th:field="*{name}">
+
+</form>
 </body>
 </html>
