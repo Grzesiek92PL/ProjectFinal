@@ -130,4 +130,13 @@ body {
 
 a {
     text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+nav {
+    border: 1px;
+    background-color: blue;
+    color: black;
+    padding: 6px;
 }
