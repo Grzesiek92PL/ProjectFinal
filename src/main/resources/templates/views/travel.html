@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Travel</title>
@@ -7,12 +7,18 @@
     <style>
         table, th, td {
             border: 1px solid black;
-            border-collapse: collapse;
+            border-separate: separate;
+            background-color: antiquewhite;
         }
 
+        thead th {
+            color: #b700ff;
+        }
+
+
         .btn {
-            color: rgb(65, 252, 3);
-            background-color: gray;
+            color: rgb(3, 20, 75);
+            background-color: lightpink;
         }
 
         label {
@@ -36,132 +42,148 @@
     </style>
 </head>
 <body>
-<div id="headline">Twoje wymarzone wakacje z Biurem Sun & Travel</div>
-<br/><br/>
+<div class="container">
+    <div class="topbar">
 
-<form action="/action_page.php">
-    <form action="/action_page.php">
-        <label for="cities1">Choose departure:</label>
-        <select id="cities1" name="cities1">
-            <option value="Madrid">Madrid</option>
-            <option value="Warsaw">Warsaw</option>
-            <option value="Berlin">Berlin</option>
-            <option value="Oslo">Oslo</option>
-            <option value="Rome">Rome</option>
-        </select>
-        <form action="/action_page.php">
-            <label for="departures"></label>
-            <input type="date" id="departures" name="departures">
-        </form>
-    </form>
-</form>
+        <div class="option"><a href="/home">Home</a></div>
+        <div class="option"><a href="/travel">Travel</a></div>
+        <div class="option"><a href="/hotel">Hotel</a></div>
+        <div class="option"><a href="/country">Country</a></div>
+        <div class="option"><a href="/airport">Airport</a></div>
+        <div class="option"><a href="/city">City</a></div>
+        <div class="option"><a href="contact">Contact</a></div>
 
-<form action="/action_page.php">
-    <form action="/action_page.php">
-        <label for="cities2">Choose arrival:</label>
-        <select id="cities2" name="cities2">
-            <option value="Madrid">Madrid</option>
-            <option value="Warsaw">Warsaw</option>
-            <option value="Berlin">Berlin</option>
-            <option value="Oslo">Oslo</option>
-            <option value="Rome">Rome</option>
-        </select>
-        <form action="/action_page.php">
-            <label for="arrivals"></label>
-            <input type="date" id="arrivals" name="arrivals">
-        </form>
-        <br/><br/>
-    </form>
-
-    <button type="search" class="btn btn-outline-primary" style="width: 20%;">Search</button>
-    <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
-        <div class="col">
-
-        </div>
     </div>
-</form>
+    <div style="clear:both;"></div>
+    <div id="headline">Twoje wymarzone wakacje z Biurem Sun & Travel</div>
+    <br/><br/>
 
-<table>
-    <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>description</th>
-        <th>fromCityName</th>
-        <th>toCity</th>
-        <th>fromAirport</th>
-        <th>toAirport</th>
-        <th>toHotel</th>
-        <th>country</th>
-        <th>tourPrice</th>
-        <th>travelDateFrom</th>
-        <th>travelDateTo</th>
-    </tr>
-    <th:block th:each="travel:${travels}">
+    <form action="/action_page.php">
+        <form action="/action_page.php">
+            <label for="cities1">Choose departure:</label>
+            <select id="cities1" name="cities1">
+                <option value="Wybierz">Wybierz</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Warsaw">Warsaw</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Oslo">Oslo</option>
+                <option value="Rome">Rome</option>
+            </select>
+            <form action="/action_page.php">
+                <label for="departures"></label>
+                <input type="date" id="departures" name="departures">
+            </form>
+        </form>
+    </form>
+
+    <form action="/action_page.php">
+        <form action="/action_page.php">
+            <label for="cities2">Choose arrival:</label>
+            <select id="cities2" name="cities2">
+                <option value="Wybierz">Wybierz</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Warsaw">Warsaw</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Oslo">Oslo</option>
+                <option value="Rome">Rome</option>
+            </select>
+            <form action="/action_page.php">
+                <label for="arrivals"></label>
+                <input type="date" id="arrivals" name="arrivals">
+            </form>
+            <br/><br/>
+        </form>
+
+        <button type="search" class="btn btn-outline-primary" style="width: 20%;">Search</button>
+        <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
+            <div class="col">
+
+            </div>
+        </div>
+    </form>
+
+    <table>
         <tr>
-            <td>
-                <span th:text="${travel.id}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.name}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.description}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.fromCityName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.toCityName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.fromAirportName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.toAirportName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.toHotelName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.countryName}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.tourPrice}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.travelDateFrom}"></span>
-            </td>
-            <td>
-                <span th:text="${travel.travelDateTo}"></span>
-            </td>
+            <th>id</th>
+            <th>name</th>
+            <th>description</th>
+            <th>fromCityName</th>
+            <th>toCity</th>
+            <th>fromAirport</th>
+            <th>toAirport</th>
+            <th>toHotel</th>
+            <th>country</th>
+            <th>tourPrice</th>
+            <th>travelDateFrom</th>
+            <th>travelDateTo</th>
         </tr>
-    </th:block>
+        <th:block th:each="travel:${travels}">
+            <tr>
+                <td>
+                    <a href="/travel/1"><span th:text="${travel.id}"></span></a>
+                </td>
+                <td>
+                    <span th:text="${travel.name}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.description}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.fromCityName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.toCityName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.fromAirportName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.toAirportName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.toHotelName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.countryName}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.tourPrice}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.travelDateFrom}"></span>
+                </td>
+                <td>
+                    <span th:text="${travel.travelDateTo}"></span>
+                </td>
+            </tr>
+        </th:block>
 
-</table>
-<br/><br/>
-<form>
-    <label for="fname">Turystyczny Fundusz Gwarancyjny jest wliczony w cenę.</label><br>
+    </table>
+    <br/><br/>
+    <form>
+        <label for="greetings">Turystyczny Fundusz Gwarancyjny jest wliczony w cenę.</label><br>
 
-</form>
+    </form>
 
-<form>
-    <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
-        <div class="col">
-            <button type="submit" class="btn btn-outline-primary" style="width: 20%;">Submit</button>
+    <form>
+        <div class="form-row " style="margin-top: 10px; margin-bottom: 10px">
+            <div class="col">
+                <button type="submit" class="btn btn-outline-primary" style="width: 20%;">Submit</button>
+            </div>
         </div>
-    </div>
-</form>
+    </form>
 
-<form>
-    <div id="greetings">
-        Dziękujemy, że wybrałeś nasze biuro podróży !!!
-        <br/> Życzymy udanego wypoczynku !!!
+    <form>
+        <div id="greetings">
+            Dziękujemy, że wybrałeś nasze biuro podróży !!!
+            <br/> Życzymy udanego wypoczynku !!!
+            <br/>
+
+        </div>
+        <br/> Infolinia: 800 100 800
+        <input type="button" value="Kliknij">
         <br/>
-
-    </div>
-    <br/> Infolinia: 800 100 800
-    <input type="button" value="Kliknij">
-    <br/>
-</form>
+    </form>
+</div>
 </body>
 </html>

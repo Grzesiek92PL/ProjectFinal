@@ -40,7 +40,23 @@ public class TravelController {
         travelService.editTravel(dto);
         return "redirect:/travel";
     }
+
+    @PostMapping("/addTravel")
+    public String addTravel(@ModelAttribute TravelDto dto) {
+        travelService.addTravel(dto);
+        return "redirect:/travel";
+    }
+
+    @GetMapping("/addTravel")
+    public String addTravel(Model model) {
+        TravelDto addTravel = new TravelDto();
+        model.addAttribute("addTravel", addTravel);
+        return "views/addTravel";
+    }
+
 }
+
+
 
 
 

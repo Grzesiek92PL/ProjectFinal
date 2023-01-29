@@ -15,6 +15,20 @@
     <label for="name">Nazwa wycieczki</label>
     <input type="text" id="name" th:value="${name}" th:field="*{name}">
 
+    <label for="description">Opis Wycieczki</label>
+    <input type="text" id="description" th:value="${description}" th:field="*{description}">
+
+    <label for="fromCityName">Odlot: </label>
+    <input type="text" id="fromCityName" th:value="${fromCityName}" th:field="*{fromCityName}">
+
+    <label for="toCityName">Przylot: </label>
+    <input type="text" id="toCityName" th:value="${toCityName}" th:field="*{toCityName}">
+
+    <label for="tourPrice">Cena wycieczki: </label>
+    <input type="text" id="tourPrice" th:value="${tourPrice}" th:field="*{tourPrice}">
+
+    <button type="submit" value="Submit">Save</button>
+    <input type="button" value="Wstecz" onClick="history.back();"/>
 </form>
 </body>
 </html>

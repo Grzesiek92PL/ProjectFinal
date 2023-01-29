@@ -20,6 +20,6 @@ public class AirportController {
     public String getAirportList(Model model) {
         List<AirportDto> airportList = airportServices.getAirports();
         model.addAttribute("airports", airportList);
-        return "airport";
+        return "views/airport";
     }
 }

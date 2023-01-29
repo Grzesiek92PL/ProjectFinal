@@ -1,3 +1,34 @@
+.container {
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.table thead th {
+
+    color: #b700ff;
+}
+.topbar {
+    /*background-color: #0435d5;*/
+    float: left;
+    min-width: 80px;
+    height: 25px;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0.8;
+
+}
+.option {
+    float: left;
+    min-width: 80px;
+    height: 30px;
+    font-size: 18px;
+    padding: 10px;
+    opacity: 0.8;
+    text-align: center;
+
+}
+
+
 nav {
     border: 1px;
     background-color: blue;
@@ -7,7 +38,7 @@ nav {
 
 a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 20px;
 }
 

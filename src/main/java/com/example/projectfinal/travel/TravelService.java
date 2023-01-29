@@ -2,6 +2,7 @@ package com.example.projectfinal.travel;
 
 import com.example.projectfinal.Hotel.HotelRepository;
 import com.example.projectfinal.airport.AirportRepository;
+import com.example.projectfinal.city.City;
 import com.example.projectfinal.city.CityRepository;
 import com.example.projectfinal.continent.ContinentRepository;
 import com.example.projectfinal.country.CountryRepository;
@@ -75,6 +76,15 @@ public class TravelService {
     }
 
     public void editTravel(TravelDto dto) {
+    }
+
+
+    public void addTravel(TravelDto dto) {
+        Travel travel = new Travel();
+        travel.setName(dto.getName());
+        City fromCity = cityRepository.findByName(dto.getFromCityName());
+        travel.setFromCity(fromCity);
+
     }
 }
 
