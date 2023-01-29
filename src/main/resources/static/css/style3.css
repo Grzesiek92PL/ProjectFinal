@@ -15,7 +15,7 @@ body {
 
 .postcard {
     display: inline-block;
-    width: 460px;
+    width: 450px;
     text-align: center;
     padding: 5px;
 }
@@ -41,23 +41,22 @@ h1 {
 
 }
 
-/*
 .photo2 {
-    width: 450px;
+    width: 300px;
 
 }
 
 .photo3 {
-    width: 450px;
+    width: 300px;
 
 }
 
 .photo4 {
-    width: 450px;
+    width: 300px;
 
 }
 
 .photo5 {
-    width: 450px;
+    width: 300px;
 
-}*/
+}
